@@ -4,20 +4,20 @@
 
 ## Technical skills
 
-- **Cloud operations labs** · Ubuntu deployment on AWS EC2, reboot verification, and resource teardown.
-- **Cybersecurity labs** · Private access with Tailscale, restricted Linux service permissions, and encrypted backup and recovery.
-- **Linux operations** · systemd services and timers, health monitoring, incident recovery, and continuous integration with GitHub Actions.
-- **Networking and support** · Ethernet LANs, static IPv4, router DNS settings, and Windows and Linux workstation troubleshooting.
+- **Cloud operations lab** · AWS EC2, Ubuntu deployment, and resource teardown
+- **Cybersecurity lab** · Private access with Tailscale, restricted service permissions, and encrypted backups
+- **Linux operations** · systemd services and timers, health monitoring, and incident recovery
+- **Networking** · Ethernet LANs, static IPv4, router DNS settings, and Windows and Linux connectivity troubleshooting
 
 ## Pink Party
 
-![Original pixel-art farmhouse created for Pink Party](https://raw.githubusercontent.com/V1cksy/pink-party/main/public/farmhouse.svg)
+[Pink Party](https://github.com/V1cksy/pink-party) is my private voice room for game nights with up to four people. It uses TypeScript, Vite, Node.js 24, and LiveKit.
 
-[Pink Party](https://github.com/V1cksy/pink-party) is my personal project, a private voice room for up to four people on game night. It runs on TypeScript, Vite, Node.js 24, and LiveKit.
+- **AWS deployment** · Used encrypted storage, restricted SSH ingress, and private Tailscale access. Verified startup after reboot and removed the temporary resources. [Deployment report](https://github.com/V1cksy/pink-party/blob/main/docs/cloud-report.md)
+- **Service monitoring** · Ran the app under a dedicated Linux account. A separate systemd timer detected a deliberate outage and recorded recovery. [Linux setup](https://github.com/V1cksy/pink-party/blob/main/docs/linux-deployment.md) · [Incident report](https://github.com/V1cksy/pink-party/blob/main/docs/incident-linux-monitoring.md)
+- **Backup recovery** · Restored encrypted data and configuration into a fresh Ubuntu VM. Tested SFTP against a local OpenSSH fixture. [Recovery report](https://github.com/V1cksy/pink-party/blob/main/docs/recovery-off-vm.md) · [SFTP exercise](https://github.com/V1cksy/pink-party/blob/main/docs/offsite-backup-report.md)
+- **Continuous integration** · Ran TypeScript and Python tests in GitHub Actions, along with browser tests using synthetic audio. [CI run](https://github.com/V1cksy/pink-party/actions/runs/44173546388)
 
-- A temporary Ubuntu deployment on AWS EC2 used encrypted storage, restricted SSH ingress, and private voice access through Tailscale. The service restarted after an EC2 reboot, and the lab resources were removed. [AWS deployment report](https://github.com/V1cksy/pink-party/blob/main/docs/cloud-report.md)
-- The Ubuntu installation runs under a dedicated service account with restricted writable directories. A separate systemd timer detected a deliberate outage and recorded recovery. [Linux deployment](https://github.com/V1cksy/pink-party/blob/main/docs/linux-deployment.md) · [Incident report](https://github.com/V1cksy/pink-party/blob/main/docs/incident-linux-monitoring.md)
-- Encrypted backups restored application data and configuration into a fresh Ubuntu VM. SFTP was tested against a local OpenSSH fixture. [Recovery report](https://github.com/V1cksy/pink-party/blob/main/docs/recovery-off-vm.md) · [SFTP exercise](https://github.com/V1cksy/pink-party/blob/main/docs/offsite-backup-report.md)
-- GitHub Actions ran TypeScript and Python tests alongside browser tests with synthetic audio. [Hosted CI run](https://github.com/V1cksy/pink-party/actions/runs/44173546388)
+_Lab scope: live off-device backups and voice calls between separate homes remain unverified._
 
-Live off-device backup storage and a voice call between separate homes remain unverified.
+<img src="https://raw.githubusercontent.com/V1cksy/pink-party/main/public/farmhouse.svg" alt="Pink Party’s original pixel art farmhouse with a rose roof" width="144">
